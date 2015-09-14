@@ -1,0 +1,30 @@
+﻿@model AQRWebApp.Models.ChangeUserNameModel
+
+@{
+    ViewBag.Title = "Đổi tên email truy cập hệ thống";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="row-fluid sortable">
+    <div class="box span12">
+	    <div class="box-header well">
+		    <h2><i class="icon-info-sign"></i> Đổi tên truy cập hệ thống</h2>
+			
+            <div class="box-icon">
+			    <a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
+				<a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
+				<a href="#" class="btn btn-close btn-round"><i class="icon-remove"></i></a>
+            </div>
+        </div>
+					        
+        <div class="box-content">
+            
+
+            <legend>Email đăng nhập hệ thống của bạn: <strong>@User.Identity.Name</strong></legend>
+                            
+            @Html.Partial("_PartialChangeUserName")
+            
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>

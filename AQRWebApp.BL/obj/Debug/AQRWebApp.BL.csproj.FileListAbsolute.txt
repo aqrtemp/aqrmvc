@@ -1,0 +1,10 @@
+D:\AQR company\Dev\AQRWebApp\AQRWebApp.DLL\AQRWebApp.BL.dll
+D:\AQR company\Dev\AQRWebApp\AQRWebApp.DLL\AQRWebApp.BL.pdb
+D:\AQR company\Dev\AQRWebApp\AQRWebApp.BL\obj\Debug\AQRWebApp.BL.csprojResolveAssemblyReference.cache
+D:\AQR company\Dev\AQRWebApp\AQRWebApp.BL\obj\Debug\AQRWebApp.BL.dll
+D:\AQR company\Dev\AQRWebApp\AQRWebApp.BL\obj\Debug\AQRWebApp.BL.pdb
+D:\AQRWebApp\AQRWebApp.DLL\AQRWebApp.BL.dll
+D:\AQRWebApp\AQRWebApp.DLL\AQRWebApp.BL.pdb
+D:\AQRWebApp\AQRWebApp.BL\obj\Debug\AQRWebApp.BL.csprojResolveAssemblyReference.cache
+D:\AQRWebApp\AQRWebApp.BL\obj\Debug\AQRWebApp.BL.dll
+D:\AQRWebApp\AQRWebApp.BL\obj\Debug\AQRWebApp.BL.pdb

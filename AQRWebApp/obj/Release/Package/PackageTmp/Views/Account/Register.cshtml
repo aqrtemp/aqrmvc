@@ -1,0 +1,62 @@
+﻿@model AQRWebApp.Models.RegisterModel
+@{
+    ViewBag.Title = "Tạo tài khoản mới";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<style>
+    #registerform {
+        margin-top:40px;
+        margin-bottom:20px;
+        padding-left:100px;
+    }
+
+        #registerform label {
+            margin-right:5px;
+        }
+
+        #registerform select {
+            width:315px;
+        }
+        
+</style>
+
+<script>
+    $(document).ready(function () {
+        InitializeFormInterface($("#registerform"));
+
+        $("#personId").chosen();
+    });
+</script>
+
+<div id="page" class="main_content">
+    <hgroup class="itemTitle">
+        <h1 style="color:white;">TẠO TÀI KHOẢN MỚI</h1>
+    </hgroup>
+
+    <p class="message-success">@ViewBag.StatusMessage</p>
+
+    @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { id = "registerform" }))
+    {
+        @Html.AntiForgeryToken()
+
+        <fieldset> 
+            @Html.Partial("_PartialRegister",Model)
+
+            <dl style="margin-left:270px;margin-top:70px;">
+                <dd>
+                    <input type="submit" name="submit" id="submit" value="Cập nhật" class="NFButton">
+                </dd>
+            </dl>
+        </fieldset>
+
+    }
+
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }
+
+</div>
+
+<div class="clear"></div>
+<div class="footer main_container"></div>

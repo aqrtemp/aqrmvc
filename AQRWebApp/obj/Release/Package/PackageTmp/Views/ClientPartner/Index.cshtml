@@ -1,0 +1,340 @@
+﻿@model AQRWebApp.Models.ClientPartnerModel
+
+@{
+    ViewBag.Title = "ClientPartner";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<!-- DataTables -->
+<link href="@Url.Content("~/Content/Table/css/jquery.dataTables.css")" rel="stylesheet" />
+<link href="@Url.Content("~/Content/Table/css/dataTables.bootstrap.css")" rel="stylesheet" />
+<link href="@Url.Content("~/Content/Table/css/dataTables.fontAwesome.css")" rel="stylesheet" />
+<link href="@Url.Content("~/Content/Table/css/dataTables.tableTools.css")" rel="stylesheet" />
+
+<!--datatable-->
+<script src="@Url.Content("~/Content/Table/js/jquery.dataTables.js")"></script>
+<script src="@Url.Content("~/Content/Table/js/dataTables.tableTools.js")"></script>
+<script src="@Url.Content("~/Content/Table/js/dataTables.bootstrap.js")"></script>
+<script src="@Url.Content("~/Content/Table/js/jquery.jeditable.js")"></script>
+<script src="@Url.Content("~/Content/Table/js/jquery.dataTables.editable.js")"></script>
+<script src="@Url.Content("~/Content/Table/js/jquery.dataTables.rowGrouping.js")"></script>
+
+
+
+<script type="text/javascript" charset="utf-8">
+    var oTableClientPartner;
+    var clientSection = "{";
+    var partnerSection = "{";
+
+    @{
+        if (Model.Clients != null)
+        {
+            for (int i = 0; i <= Model.Clients.Count() - 1; i++)
+            {
+                <text>
+                    clientSection = clientSection + "'" + '@Model.Clients[i].Id' + "':'" + '@Model.Clients[i].ClientId'  + "'";
+
+                    if (@i < @Model.Clients.Count() - 1)
+                    {
+                        clientSection = clientSection + ",";
+                    }
+                    else {
+                    clientSection = clientSection + "}";
+                }
+                </text>
+            }
+        }
+    
+        if (Model.Partners != null)
+        {
+            for (int i = 0; i <= Model.Partners.Count() - 1; i++)
+            {
+                <text>
+                    partnerSection = partnerSection + "'" + '@Model.Partners[i].Id' + "':'" + '@Model.Partners[i].PartnerId'  + "'";
+
+                    if (@i < @Model.Partners.Count() - 1)
+                    {
+                                partnerSection = partnerSection + ",";
+                    }
+                else {
+                    partnerSection = partnerSection + "}";
+                }
+                </text>
+            }
+        }
+    }
+
+    $(document).ready(function () {
+        oTableClientPartner = $("#DataTableClientPartner").DataTable({
+            dom: "<'row-fluid'<'span6'l><'span6'f>r>t<'row-fluid'<'span12'i><'span12 center'p>>",
+            tableTools: {
+                "sRowSelect": "os",
+                "sSelectedClass": "selected"
+            },
+            "bJQueryUI": false,
+            "bProcessing": true,
+            "bServerSide": true,
+            "sAjaxSource": "@Url.Action("GetList","ClientPartner")",
+            "sServerMethod": "POST",
+            "fnServerParams": function ( aoData ) {
+                //aoData.push( { "name": "more_data", "value": "my_value" } );
+            },
+            "iDisplayLength": 10,
+            "bAutoWidth": true,
+            "sPaginationType": "full_numbers",
+            "aaSorting": [[1, "asc"]],
+            "bStateSave": true,
+            "scrollX": true,
+            "scrollCollapse": true,
+            "aoColumns": [
+                        {
+                            "sName": "Id",
+                            "sTitle": "Id",
+                            "sClass": "center",
+                            "sDefaultContent": "",
+                            "bSearchable": false,
+                            "bSortable": false,
+                            "bVisible": false
+                        },
+                        {
+                            "sTitle": "ClientId",
+                            "sClass": "left",
+                            "sDefaultContent": "",
+                            "bSearchable": true,
+                            "bSortable": true
+                        },
+                        {
+                            "sTitle": "PartnerId",
+                            "sClass": "left",
+                            "sDefaultContent": "",
+                            "bSearchable": true,
+                            "bSortable": true
+                        },
+                        {
+                            "sTitle": "CarrierId",
+                            "sClass": "left",
+                            "sDefaultContent": ""
+                        },
+                        {
+                            "sTitle": "PartnerEDINo",
+                            "sClass": "left",
+                            "sDefaultContent": ""
+                        },
+                        {
+                            "sTitle": "EDIDocCode",
+                            "sClass": "left",
+                            "sDefaultContent": ""
+                        },
+                        {
+                            "sTitle": "EDIDocType",
+                            "sClass": "left",
+                            "sDefaultContent": ""
+                        },
+                        {
+                            "sTitle": "Directory",
+                            "sClass": "left",
+                            "sDefaultContent": ""
+                        }
+                        
+            ]
+        });
+
+        var tt = new $.fn.dataTable.TableTools(oTableClientPartner);
+        $("#tableToolClientPartner").prepend(tt.fnContainer());
+
+        $("#DataTableClientPartner").dataTable().makeEditable({
+            sUpdateURL: "@Url.Action("Update","ClientPartner")",
+            sDeleteURL: "@Url.Action("DeleteById","ClientPartner")",
+            sDeleteRowButtonId: "btnDeleteClientPartner",
+
+            "aoColumns": [
+                            {
+                                indicator: 'Saveing...',
+                                tooltip: 'select gender',
+                                loadtext: 'Loading...',
+                                type: 'select',
+                                onblur: 'submit',
+                                data: clientSection
+                            },
+                            {
+                                indicator: 'Saveing...',
+                                tooltip: 'select gender',
+                                loadtext: 'Loading...',
+                                type: 'select',
+                                onblur: 'submit',
+                                data: partnerSection
+                            },
+                            {},
+                            {},
+                            {},
+                            {},
+                            {}
+            ]
+        });
+
+        $('#DataTableClientPartner tbody').on('click', 'tr', function () {
+            if ($(this).hasClass('selected')) {
+                $(this).removeClass('selected');
+            }
+            else {
+                oTableClientPartner.$('tr.selected').removeClass('selected');
+                $(this).addClass('selected');
+            }
+        });
+
+        $("#btnAddClientPartner").click(function (e) {
+            InitialAddClientPartnerError();
+
+            $("#formAddClientPartner")[0].reset();
+
+            e.preventDefault();
+
+            $('#modalformAddClientPartner').modal({
+                "backdrop": "static",
+                "keyboard": true,
+                "show": true,
+                "width": "550"
+            });
+        });
+
+        $("#btnUpdateAddClientPartner").click(function () {
+
+            if (CheckFormAddClientPartner()) {
+                InitialAddClientPartnerError();
+
+                $.ajax({
+                    url: "@Url.Action("Add", "ClientPartner")",
+                    type: "GET",
+                    data: { name: $("input[name='ClientPartner_Name']").val() },
+                    dataType: "json",
+                    contentType: 'application/json; charset=utf-8',
+                    error: function () {
+                        ShowAddClientPartnerError("Access denied.");
+                        return false;
+                    },
+                    success: function (result) {
+                        if (result == "") {
+                            $('#modalformAddClientPartner').modal("hide");
+                            oTableClientPartner.draw();
+                        }
+                        else {
+                            ShowAddClientPartnerError(result);
+                        }
+                    }
+                });
+            }
+        });
+
+        $("#DataTableClientPartner tbody").delegate("tr td input", "click", function () {
+            $.ajax({
+                url: "@Url.Action("Update", "ClientPartner")",
+                type: "POST",
+                data: { id: $(this).closest("tr").prop("id"), value: $(this).prop("checked"), rowId: $(this).closest("tr").index(), columnPosition: $(this).closest("td").index(), columnId: null, columnName: "" },
+                error: function () {
+                    alert("Network connection  is error.");
+                    return false;
+                },
+                success: function (result) {
+                }
+            });
+        });
+    });
+
+    function InitialAddClientPartnerError() {
+        $("#divAddClientPartnerError").hide();
+        $("#lblAddClientPartnerError").text("");
+    }
+
+    function CheckFormAddClientPartner() {
+        var check = true;
+        var error = "";
+
+        InitialAddClientPartnerError();
+
+        if ($("input[name='ClientPartner_Name']").val() == "") {
+            error = "enter the name";
+            check = false;
+        }
+
+        if (!check)
+            ShowAddClientPartnerError(error);
+
+        return check;
+    }
+
+    function ShowAddClientPartnerError(text) {
+        $("#divAddClientPartnerError").show();
+        $("#lblAddClientPartnerError").text(text);
+    }
+</script>
+
+<section class="content-header">
+    <h1>
+        CLIENT - PARTNER
+        <small>manage the Client - Partner</small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="@Url.Action("Index","Home")"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li><a href="#">List</a></li>
+        <li class="active">Client - Partner</li>
+    </ol>
+</section>
+
+
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+
+                <div class="box-header">
+                    <h3 class="box-title">Client - Partner</h3>
+
+                    <div class="box-tools pull-right">
+                        <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                        <div class="btn-group">
+                            <button class="btn btn-box-tool dropdown-toggle" data-toggle="dropdown"><i class="fa fa-wrench"></i></button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                    </div>
+                </div><!-- /.box-header -->
+
+                <div class="box-body">
+                    <div class="AddDeleteButton">
+                        <div class="AddDeleteButton">
+                            <button class="btn btn-danger" id="btnDeleteClientPartner">Delete</button>
+                            <button class="btn btn-primary" id="btnAddClientPartner">Add</button>
+                        </div>
+                    </div>
+
+                    <div class="tableTool" id="tableToolClientPartner"></div>
+
+                    <table class="table table-bordered table-hover" id="DataTableClientPartner">
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th style="text-align:center"></th>
+                                <th style="text-align:center"></th>
+                                <th style="text-align:center"></th>
+                                <th style="text-align:center"></th>
+                                <th style="text-align:center"></th>
+                                <th style="text-align:center"></th>
+                                <th style="text-align:center"></th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!--/span-->
+
+    </div><!--/row-->
+</section>

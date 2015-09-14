@@ -1,0 +1,140 @@
+﻿<script>
+    $(document).ready(function () {
+        showTotalClients();
+    })
+
+    function showTotalClients() {
+        $.ajax({
+            url: "@Url.Action("GetListClients", "Home")",
+            type: "GET",
+            dataType: "json",
+            contentType: 'application/json; charset=utf-8',
+            error: function () {
+                    alert("Lỗi kết nối mạng.");
+                    return false;
+                },
+                success: function (result) {
+                    if (result != null) {
+                        
+                        var clientList = "";
+                        $.each(result, function (index, item) {
+                            clientList = clientList + '<li><a href="#"><i class="fa fa-circle-o"></i>' +  item.ClientName + '</a></li>';
+                        });
+
+                        $("#clientlist").after(clientList);
+                        $("#totalClients").text(result.length);
+                    }
+                }
+        });
+    }
+</script>
+
+<aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+        
+        <!-- search form -->
+        <form action="#" method="get" class="sidebar-form">
+            <div class="input-group">
+                <input type="text" name="q" class="form-control" placeholder="Search...">
+                <span class="input-group-btn">
+                    <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i></button>
+                </span>
+            </div>
+        </form>
+        <!-- /.search form -->
+        <!-- sidebar menu: : style can be found in sidebar.less -->
+        <ul class="sidebar-menu">
+            <li class="header">MAIN NAVIGATION</li>
+            <li class="active treeview">
+                <a href="#">
+                    <i class="fa fa-dashboard"></i> <span>WMS</span> <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="@Url.Action("Index","Home")"><i class="fa fa-circle-o"></i> Dashboard</a></li>
+                </ul>
+            </li>
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-dashboard"></i> <span>Company</span>
+                </a>
+            </li>
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-files-o"></i>
+                    <span>Client</span>
+                    <span id="totalClients" class="label label-primary pull-right">4</span>
+                </a>
+                <ul id="clientlist" class="treeview-menu"></ul>
+            </li>
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-files-o"></i>
+                    <span>Report</span>
+                </a>
+            </li>
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-files-o"></i>
+                    <span>List</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="@Url.Action("Index","Client")"><i class="fa fa-circle-o"></i> Client</a></li>
+                    <li><a href="@Url.Action("Index","Partner")"><i class="fa fa-circle-o"></i> Partner</a></li>
+                    <li><a href="@Url.Action("Index","PartnerStore")"><i class="fa fa-circle-o"></i> Parnter Store</a></li>
+                    <li><a href="@Url.Action("Index","ClientPartner")"><i class="fa fa-circle-o"></i> Client - Partner</a></li>
+                </ul>
+            </li>
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-files-o"></i>
+                    <span>QA</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="#"><i class="fa fa-circle-o"></i> QA DCI</a></li>
+                    <li><a href="#"><i class="fa fa-circle-o"></i> QA DESIGNWORKS</a></li>
+                    <li><a href="#"><i class="fa fa-circle-o"></i> QA MISSIONBROWN</a></li>
+                    <li><a href="#"><i class="fa fa-circle-o"></i> DESIGNWORKS DELIVERY INSTRUCTION</a></li>
+                </ul>
+            </li>
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-files-o"></i>
+                    <span>Help</span>
+                </a>
+            </li>
+        </ul>
+
+        <ul class="sidebar-menu">
+            <li class="header">Setting</li>
+            <li class="active treeview">
+                <a href="@Url.Action("Index","Account")">
+                    <i class="fa fa-user"></i> <span>Accounts</span>
+                </a>
+            </li>
+            <li class="active treeview">
+                <a href="@Url.Action("Index","Person")">
+                    <i class="fa fa-list"></i> <span>Persons list</span>
+                </a>
+            </li>
+            <li class="active treeview">
+                <a href="@Url.Action("Index","ChucDanh")">
+                    <i class="fa fa-list"></i> <span>Chức danh list</span>
+                </a>
+            </li>
+            <li class="active treeview">
+                <a href="@Url.Action("Index","Department")">
+                    <i class="fa fa-list"></i> <span>Departments list</span>
+                </a>
+            </li>
+            <li class="active treeview">
+                <a href="@Url.Action("Index","Gender")">
+                    <i class="fa fa-list"></i> <span>Genders list</span>
+                </a>
+            </li>
+        </ul>
+    </section>
+    <!-- /.sidebar -->
+</aside>

@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{05D76C6B-2FB9-4ACB-85DC-406D6086C247}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AQRWebApp.Model</RootNamespace>
+    <AssemblyName>AQRWebApp.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\AQRWebApp.DLL\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AQRWebApp.DLL\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AQRWebAppDbContext.cs" />
+    <Compile Include="EntityDto\BaseEntityDto.cs" />
+    <Compile Include="EntityDto\ChucDanhDto.cs" />
+    <Compile Include="EntityDto\ClientDto.cs" />
+    <Compile Include="EntityDto\ClientPartnerDto.cs" />
+    <Compile Include="EntityDto\DepartmentDto.cs" />
+    <Compile Include="EntityDto\GenderDto.cs" />
+    <Compile Include="EntityDto\PartnerDto.cs" />
+    <Compile Include="EntityDto\PartnerStoreDto.cs" />
+    <Compile Include="EntityDto\PersonDto.cs" />
+    <Compile Include="Entity\AppInfo.cs" />
+    <Compile Include="Entity\BaseEntity.cs" />
+    <Compile Include="Entity\ChucDanh.cs" />
+    <Compile Include="Entity\Client.cs" />
+    <Compile Include="Entity\ClientPartner.cs" />
+    <Compile Include="Entity\Colour.cs" />
+    <Compile Include="Entity\Delivery.cs" />
+    <Compile Include="Entity\Department.cs" />
+    <Compile Include="Entity\FileInfo.cs" />
+    <Compile Include="Entity\Gender.cs" />
+    <Compile Include="Entity\Partner.cs" />
+    <Compile Include="Entity\PartnerStore.cs" />
+    <Compile Include="Entity\Person.cs" />
+    <Compile Include="Entity\PersonAccount.cs" />
+    <Compile Include="Entity\Product.cs" />
+    <Compile Include="Entity\Receive.cs" />
+    <Compile Include="Entity\ShipmentId.cs" />
+    <Compile Include="Entity\ShipmentRegister.cs" />
+    <Compile Include="Entity\Size.cs" />
+    <Compile Include="Entity\SizeGroup.cs" />
+    <Compile Include="Entity\Style.cs" />
+    <Compile Include="MyInitializer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

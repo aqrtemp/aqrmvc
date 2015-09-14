@@ -1,0 +1,48 @@
+﻿@model AQRWebApp.Models.LocalPasswordModel
+
+@{
+    ViewBag.Title = "Đổi mật khẩu";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<style>
+    .message-success {
+        color: #7ac0da;
+        font-size: 1.3em;
+        font-weight: bold;
+        margin: 20px 0 10px 0;
+    }
+</style>
+
+<div class="row-fluid sortable">
+    <div class="box span12">
+	    <div class="box-header well">
+		    <h2><i class="icon-info-sign"></i> Đổi mật khẩu</h2>
+			
+            <div class="box-icon">
+			    <a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
+				<a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
+				<a href="#" class="btn btn-close btn-round"><i class="icon-remove"></i></a>
+            </div>
+        </div>
+					        
+        <div class="box-content">
+            <p class="message-error">@ViewBag.StatusMessage</p>
+
+            <legend>Email đăng nhập hệ thống của bạn: <strong>@User.Identity.Name</strong></legend>
+                            
+            <p class="message-error">@ViewBag.StatusMessage</p>
+
+            @if (ViewBag.HasLocalPassword)
+            {
+                @Html.Partial("_ChangePasswordPartial")
+            }
+            else
+            { 
+                @Html.Partial("_SetPasswordPartial")
+            }
+
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>

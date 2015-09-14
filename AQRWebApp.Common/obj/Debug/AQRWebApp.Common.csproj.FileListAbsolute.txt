@@ -1,0 +1,8 @@
+D:\AQR company\Dev\AQRWebApp\AQRWebApp.DLL\AQRWebApp.Common.dll
+D:\AQR company\Dev\AQRWebApp\AQRWebApp.DLL\AQRWebApp.Common.pdb
+D:\AQR company\Dev\AQRWebApp\AQRWebApp.Common\obj\Debug\AQRWebApp.Common.dll
+D:\AQR company\Dev\AQRWebApp\AQRWebApp.Common\obj\Debug\AQRWebApp.Common.pdb
+D:\AQRWebApp\AQRWebApp.DLL\AQRWebApp.Common.dll
+D:\AQRWebApp\AQRWebApp.DLL\AQRWebApp.Common.pdb
+D:\AQRWebApp\AQRWebApp.Common\obj\Debug\AQRWebApp.Common.dll
+D:\AQRWebApp\AQRWebApp.Common\obj\Debug\AQRWebApp.Common.pdb

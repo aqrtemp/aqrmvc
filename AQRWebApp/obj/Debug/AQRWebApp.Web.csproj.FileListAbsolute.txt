@@ -1,0 +1,192 @@
+D:\AQRWebApp\AQRWebApp\bin\AQRWebApp.dll.config
+D:\AQRWebApp\AQRWebApp\bin\AQRWebApp.dll
+D:\AQRWebApp\AQRWebApp\bin\AQRWebApp.pdb
+D:\AQRWebApp\AQRWebApp\bin\Antlr3.Runtime.dll
+D:\AQRWebApp\AQRWebApp\bin\AQRWebApp.BL.dll
+D:\AQRWebApp\AQRWebApp\bin\AQRWebApp.Common.dll
+D:\AQRWebApp\AQRWebApp\bin\AQRWebApp.DAL.dll
+D:\AQRWebApp\AQRWebApp\bin\AQRWebApp.Model.dll
+D:\AQRWebApp\AQRWebApp\bin\DotNetOpenAuth.AspNet.dll
+D:\AQRWebApp\AQRWebApp\bin\DotNetOpenAuth.Core.dll
+D:\AQRWebApp\AQRWebApp\bin\DotNetOpenAuth.OAuth.Consumer.dll
+D:\AQRWebApp\AQRWebApp\bin\DotNetOpenAuth.OAuth.dll
+D:\AQRWebApp\AQRWebApp\bin\DotNetOpenAuth.OpenId.dll
+D:\AQRWebApp\AQRWebApp\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+D:\AQRWebApp\AQRWebApp\bin\Elmah.dll
+D:\AQRWebApp\AQRWebApp\bin\Elmah.Mvc.dll
+D:\AQRWebApp\AQRWebApp\bin\EntityFramework.dll
+D:\AQRWebApp\AQRWebApp\bin\EntityFramework.SqlServer.dll
+D:\AQRWebApp\AQRWebApp\bin\Microsoft.Data.Edm.dll
+D:\AQRWebApp\AQRWebApp\bin\Microsoft.Data.OData.dll
+D:\AQRWebApp\AQRWebApp\bin\Microsoft.Web.Infrastructure.dll
+D:\AQRWebApp\AQRWebApp\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\AQRWebApp\AQRWebApp\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\AQRWebApp\AQRWebApp\bin\Newtonsoft.Json.dll
+D:\AQRWebApp\AQRWebApp\bin\System.Net.Http.Formatting.dll
+D:\AQRWebApp\AQRWebApp\bin\System.Spatial.dll
+D:\AQRWebApp\AQRWebApp\bin\System.Web.Helpers.dll
+D:\AQRWebApp\AQRWebApp\bin\System.Web.Http.dll
+D:\AQRWebApp\AQRWebApp\bin\System.Web.Http.OData.dll
+D:\AQRWebApp\AQRWebApp\bin\System.Web.Http.WebHost.dll
+D:\AQRWebApp\AQRWebApp\bin\System.Web.Mvc.dll
+D:\AQRWebApp\AQRWebApp\bin\System.Web.Optimization.dll
+D:\AQRWebApp\AQRWebApp\bin\System.Web.Razor.dll
+D:\AQRWebApp\AQRWebApp\bin\System.Web.WebPages.Deployment.dll
+D:\AQRWebApp\AQRWebApp\bin\System.Web.WebPages.dll
+D:\AQRWebApp\AQRWebApp\bin\System.Web.WebPages.Razor.dll
+D:\AQRWebApp\AQRWebApp\bin\WebGrease.dll
+D:\AQRWebApp\AQRWebApp\bin\WebMatrix.Data.dll
+D:\AQRWebApp\AQRWebApp\bin\WebMatrix.WebData.dll
+D:\AQRWebApp\AQRWebApp\bin\AQRWebApp.BL.pdb
+D:\AQRWebApp\AQRWebApp\bin\AQRWebApp.Common.pdb
+D:\AQRWebApp\AQRWebApp\bin\AQRWebApp.DAL.pdb
+D:\AQRWebApp\AQRWebApp\bin\AQRWebApp.Model.pdb
+D:\AQRWebApp\AQRWebApp\bin\EntityFramework.xml
+D:\AQRWebApp\AQRWebApp\bin\EntityFramework.SqlServer.xml
+D:\AQRWebApp\AQRWebApp\bin\Newtonsoft.Json.xml
+D:\AQRWebApp\AQRWebApp\bin\System.Net.Http.Formatting.xml
+D:\AQRWebApp\AQRWebApp\bin\System.Web.Helpers.xml
+D:\AQRWebApp\AQRWebApp\bin\System.Web.Http.xml
+D:\AQRWebApp\AQRWebApp\bin\System.Web.Http.WebHost.xml
+D:\AQRWebApp\AQRWebApp\bin\System.Web.Mvc.xml
+D:\AQRWebApp\AQRWebApp\bin\System.Web.Razor.xml
+D:\AQRWebApp\AQRWebApp\bin\System.Web.WebPages.xml
+D:\AQRWebApp\AQRWebApp\bin\System.Web.WebPages.Deployment.xml
+D:\AQRWebApp\AQRWebApp\bin\System.Web.WebPages.Razor.xml
+D:\AQRWebApp\AQRWebApp\bin\WebMatrix.Data.xml
+D:\AQRWebApp\AQRWebApp\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\AQRWebApp\AQRWebApp\bin\WebMatrix.WebData.xml
+D:\AQRWebApp\AQRWebApp\bin\DotNetOpenAuth.AspNet.xml
+D:\AQRWebApp\AQRWebApp\bin\DotNetOpenAuth.Core.xml
+D:\AQRWebApp\AQRWebApp\bin\DotNetOpenAuth.OAuth.Consumer.xml
+D:\AQRWebApp\AQRWebApp\bin\DotNetOpenAuth.OAuth.xml
+D:\AQRWebApp\AQRWebApp\bin\DotNetOpenAuth.OpenId.xml
+D:\AQRWebApp\AQRWebApp\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+D:\AQRWebApp\AQRWebApp\bin\System.Web.Http.OData.xml
+D:\AQRWebApp\AQRWebApp\bin\Microsoft.Data.Edm.xml
+D:\AQRWebApp\AQRWebApp\bin\Microsoft.Data.OData.xml
+D:\AQRWebApp\AQRWebApp\bin\System.Spatial.xml
+D:\AQRWebApp\AQRWebApp\bin\de\Microsoft.Data.Edm.resources.dll
+D:\AQRWebApp\AQRWebApp\bin\es\Microsoft.Data.Edm.resources.dll
+D:\AQRWebApp\AQRWebApp\bin\fr\Microsoft.Data.Edm.resources.dll
+D:\AQRWebApp\AQRWebApp\bin\it\Microsoft.Data.Edm.resources.dll
+D:\AQRWebApp\AQRWebApp\bin\ja\Microsoft.Data.Edm.resources.dll
+D:\AQRWebApp\AQRWebApp\bin\ko\Microsoft.Data.Edm.resources.dll
+D:\AQRWebApp\AQRWebApp\bin\ru\Microsoft.Data.Edm.resources.dll
+D:\AQRWebApp\AQRWebApp\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+D:\AQRWebApp\AQRWebApp\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+D:\AQRWebApp\AQRWebApp\bin\de\Microsoft.Data.OData.resources.dll
+D:\AQRWebApp\AQRWebApp\bin\es\Microsoft.Data.OData.resources.dll
+D:\AQRWebApp\AQRWebApp\bin\fr\Microsoft.Data.OData.resources.dll
+D:\AQRWebApp\AQRWebApp\bin\it\Microsoft.Data.OData.resources.dll
+D:\AQRWebApp\AQRWebApp\bin\ja\Microsoft.Data.OData.resources.dll
+D:\AQRWebApp\AQRWebApp\bin\ko\Microsoft.Data.OData.resources.dll
+D:\AQRWebApp\AQRWebApp\bin\ru\Microsoft.Data.OData.resources.dll
+D:\AQRWebApp\AQRWebApp\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+D:\AQRWebApp\AQRWebApp\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+D:\AQRWebApp\AQRWebApp\bin\de\System.Spatial.resources.dll
+D:\AQRWebApp\AQRWebApp\bin\es\System.Spatial.resources.dll
+D:\AQRWebApp\AQRWebApp\bin\fr\System.Spatial.resources.dll
+D:\AQRWebApp\AQRWebApp\bin\it\System.Spatial.resources.dll
+D:\AQRWebApp\AQRWebApp\bin\ja\System.Spatial.resources.dll
+D:\AQRWebApp\AQRWebApp\bin\ko\System.Spatial.resources.dll
+D:\AQRWebApp\AQRWebApp\bin\ru\System.Spatial.resources.dll
+D:\AQRWebApp\AQRWebApp\bin\zh-Hans\System.Spatial.resources.dll
+D:\AQRWebApp\AQRWebApp\bin\zh-Hant\System.Spatial.resources.dll
+D:\AQRWebApp\AQRWebApp\obj\Debug\AQRWebApp.dll
+D:\AQRWebApp\AQRWebApp\obj\Debug\AQRWebApp.pdb
+D:\AQRWebApp\AQRWebApp\bin\DropDownList_Optgroup.dll
+D:\AQRWebApp\AQRWebApp\obj\Debug\AQRWebApp.Web.csprojResolveAssemblyReference.cache
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\AQRWebApp.dll.config
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\AQRWebApp.dll
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\AQRWebApp.pdb
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\Antlr3.Runtime.dll
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\AQRWebApp.Common.dll
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\DotNetOpenAuth.AspNet.dll
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\DotNetOpenAuth.Core.dll
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\DotNetOpenAuth.OAuth.Consumer.dll
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\DotNetOpenAuth.OAuth.dll
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\DotNetOpenAuth.OpenId.dll
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\DropDownList_Optgroup.dll
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\Elmah.dll
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\Elmah.Mvc.dll
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\EntityFramework.dll
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\EntityFramework.SqlServer.dll
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\Microsoft.Data.Edm.dll
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\Microsoft.Data.OData.dll
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\Microsoft.Web.Infrastructure.dll
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\Newtonsoft.Json.dll
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\System.Spatial.dll
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\System.Web.Helpers.dll
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\System.Web.Http.OData.dll
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\System.Web.Mvc.dll
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\System.Web.Optimization.dll
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\System.Web.Razor.dll
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\System.Web.WebPages.Deployment.dll
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\System.Web.WebPages.dll
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\System.Web.WebPages.Razor.dll
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\WebGrease.dll
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\WebMatrix.Data.dll
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\WebMatrix.WebData.dll
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\AQRWebApp.BL.pdb
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\AQRWebApp.DAL.pdb
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\AQRWebApp.Model.pdb
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\EntityFramework.xml
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\EntityFramework.SqlServer.xml
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\Newtonsoft.Json.xml
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\System.Web.Helpers.xml
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\System.Web.Mvc.xml
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\System.Web.Razor.xml
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\System.Web.WebPages.xml
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\System.Web.WebPages.Deployment.xml
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\System.Web.WebPages.Razor.xml
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\WebMatrix.Data.xml
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\WebMatrix.WebData.xml
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\DotNetOpenAuth.AspNet.xml
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\DotNetOpenAuth.Core.xml
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\DotNetOpenAuth.OAuth.Consumer.xml
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\DotNetOpenAuth.OAuth.xml
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\DotNetOpenAuth.OpenId.xml
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\System.Web.Http.OData.xml
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\Microsoft.Data.Edm.xml
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\Microsoft.Data.OData.xml
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\System.Spatial.xml
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\de\Microsoft.Data.Edm.resources.dll
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\es\Microsoft.Data.Edm.resources.dll
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\fr\Microsoft.Data.Edm.resources.dll
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\it\Microsoft.Data.Edm.resources.dll
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\ja\Microsoft.Data.Edm.resources.dll
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\ko\Microsoft.Data.Edm.resources.dll
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\ru\Microsoft.Data.Edm.resources.dll
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\de\Microsoft.Data.OData.resources.dll
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\es\Microsoft.Data.OData.resources.dll
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\fr\Microsoft.Data.OData.resources.dll
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\it\Microsoft.Data.OData.resources.dll
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\ja\Microsoft.Data.OData.resources.dll
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\ko\Microsoft.Data.OData.resources.dll
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\ru\Microsoft.Data.OData.resources.dll
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\de\System.Spatial.resources.dll
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\es\System.Spatial.resources.dll
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\fr\System.Spatial.resources.dll
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\it\System.Spatial.resources.dll
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\ja\System.Spatial.resources.dll
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\ko\System.Spatial.resources.dll
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\ru\System.Spatial.resources.dll
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\zh-Hans\System.Spatial.resources.dll
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\zh-Hant\System.Spatial.resources.dll
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\obj\Debug\AQRWebApp.Web.csprojResolveAssemblyReference.cache
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\obj\Debug\AQRWebApp.dll
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\obj\Debug\AQRWebApp.pdb
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\AQRWebApp.BL.dll
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\AQRWebApp.DAL.dll
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\AQRWebApp.Model.dll
+D:\AQR company\Dev\AQRWebApp\AQRWebApp\bin\AQRWebApp.Common.pdb

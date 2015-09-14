@@ -1,0 +1,85 @@
+﻿@model AQRWebApp.Models.ChangeUserNameModel
+
+<script>
+    $(document).ready(function () {
+        $("#btnUpdate").click(function () {
+            $("#messageContent").text("");
+            $("#message").text("");
+
+            if (CheckForm()) {
+
+                data = { userId: $("input[name='UserId']").val(), userName: $("input[name='UserName']").val() };
+
+                $.ajax({
+                    url: "@Url.Action("ChangeUserName", "Account")",
+                    type: "POST",
+                    data: JSON.stringify(data),
+                    dataType: "json",
+                    contentType: 'application/json; charset=utf-8',
+                    error: function () {
+                        $("#messageContent").text("Lỗi kết nối mạng.");
+                        $("#OneButtonModalMessage").modal("show");
+                        $("#message").text("Lỗi kết nối mạng.");
+                       
+                        return false;
+                    },
+                    success: function (result) {
+
+                        if (result == "") {
+                            $("#messageContent").text("Cập nhật thành công.");
+                            $("#OneButtonModalMessage").modal("show");
+                            $("#message").text("Cập nhật thành công.");
+                        }
+                        else {
+                            $("#messageContent").text(result);
+                            $("#OneButtonModalMessage").modal("show");
+                            $("#message").text(result);
+                        }
+                    }
+                });
+            }
+
+            return false;
+        });
+    });    
+
+    function CheckForm()
+    {
+        var result = true;
+
+        $("#lblUserNameError").text("");
+
+        if (!validEmail($("input[name='UserName']").val())) {
+            result = false;
+
+            $("#lblUserNameError").text("Email không đúng.");
+        }
+
+        return result;
+    }
+</script>
+
+<form id="formChangeUserName" class ="form-horizontal">
+
+    <fieldset>
+        
+        <p id="message" class="message-error"></p>
+
+        @Html.HiddenFor(m=>m.UserId)
+
+        <div class="control-group">
+            <label class="control-label">Email </label>
+            <div class="controls">
+                @Html.TextBoxFor(m => m.UserName)
+	            <span class="help-inline"><label id="lblUserNameError"></label></span>
+            </div>
+        </div>
+
+        <div class="form-actions">
+            <button id="btnUpdate" class="btn btn-primary">Cập nhật</button>
+        </div>
+
+    </fieldset>
+</form>
+
+@Html.Partial("_PartialOneButtonModalMessage")

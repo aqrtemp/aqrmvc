@@ -1,0 +1,67 @@
+﻿@model AQRWebApp.Models.RegisterModel
+
+<div class="form-group">
+    <label for="usernameForCreateNewAccount">@Html.Raw("Tên đăng nhập: ")</label>
+    <input type="text" class="form-control" id="usernameForCreateNewAccount" name="usernameForCreateNewAccount" placeholder="nhập tên đăng nhập">
+</div>
+
+<div class="form-group">
+    <label for="passwordForCreateNewAccount">@Html.Raw("Mật khẩu: ")</label>
+    <input type="password" class="form-control" id="passwordForCreateNewAccount" name="passwordForCreateNewAccount" placeholder="điền mật khẩu">
+</div>
+
+<div class="form-group">
+    <label for="confirmPasswordForCreateNewAccount">@Html.Raw("Nhập lại mật khẩu: ")</label>
+    <input type="password" class="form-control" id="confirmPasswordForCreateNewAccount" name="confirmPasswordForCreateNewAccount" placeholder="nhập lại mật khẩu">
+</div>
+
+@if (Model.ListOfPersonName != null)
+{ 
+    <div class="form-group">
+        <label class="control-label" for="PersonId">@Html.Raw("Thuộc nhân viên ")</label>
+        <div class="controls">
+            @Html.DropDownGroupListFor(m => m.PersonId, Model.ListOfPersonName.Select(m => new GroupedSelectListItem()
+                                                                                                   {
+                                                                                                       GroupKey = m.DepartmentId.ToString(),
+                                                                                                       GroupName = m.DepartmentName,
+                                                                                                       Text = m.Name,
+                                                                                                       Value = m.Id.ToString()
+                                                                                                   }), "Chọn nhân viên",
+                                                                                new
+                                                                                {
+                                                                                    @data_val = "true",  // for Required Validation
+                                                                                    @data_val_required = "The Name field is required." // for Required Validation)
+                                                                                })
+        </div>
+    </div>
+}
+
+
+
+<div class="form-group">
+    <label>@Html.Raw("Phân quyền: ")</label>
+</div>
+
+<label class="checkbox-inline">
+    @Html.CheckBoxFor(m => m.View1Role) @Html.Raw("Nhân viên")
+</label>
+    
+    <label class="checkbox-inline">
+        @Html.CheckBoxFor(m => m.View2Role) @Html.Raw("Trưởng đơn vị")
+    </label>
+
+    <label class="checkbox-inline">
+        @Html.CheckBoxFor(m => m.View3Role) @Html.Raw("Ban giám hiệu")
+    </label>
+
+    <label class="checkbox-inline">
+        @Html.CheckBoxFor(m => m.EditRole) @Html.Raw("Sữa")
+    </label>
+    
+    <label class="checkbox-inline">
+        @Html.CheckBoxFor(m => m.DeleteRole) @Html.Raw("Xóa")
+    </label>
+
+    <label class="checkbox-inline">
+        @Html.CheckBoxFor(m => m.AdminRole) @Html.Raw("Quản trị hệ thống")
+    </label>

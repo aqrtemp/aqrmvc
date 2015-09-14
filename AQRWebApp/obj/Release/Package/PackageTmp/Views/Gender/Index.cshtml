@@ -1,0 +1,252 @@
+﻿@{
+    ViewBag.Title = "Genders list";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<!-- DataTables -->
+<link href="@Url.Content("~/Content/Table/css/jquery.dataTables.css")" rel="stylesheet" />
+<link href="@Url.Content("~/Content/Table/css/dataTables.bootstrap.css")" rel="stylesheet" />
+<link href="@Url.Content("~/Content/Table/css/dataTables.fontAwesome.css")" rel="stylesheet" />
+<link href="@Url.Content("~/Content/Table/css/dataTables.tableTools.css")" rel="stylesheet" />
+
+<!--datatable-->
+<script src="@Url.Content("~/Content/Table/js/jquery.dataTables.js")"></script>
+<script src="@Url.Content("~/Content/Table/js/dataTables.tableTools.js")"></script>
+<script src="@Url.Content("~/Content/Table/js/dataTables.bootstrap.js")"></script>
+<script src="@Url.Content("~/Content/Table/js/jquery.jeditable.js")"></script>
+<script src="@Url.Content("~/Content/Table/js/jquery.dataTables.editable.js")"></script>
+<script src="@Url.Content("~/Content/Table/js/jquery.dataTables.rowGrouping.js")"></script>
+
+<script type="text/javascript" charset="utf-8">
+    var oTableGender;
+
+    $(document).ready(function () {
+        oTableGender = $("#DataTableGender").DataTable({
+            dom: "<'row-fluid'<'span6'l><'span6'f>r>t<'row-fluid'<'span12'i><'span12 center'p>>",
+            tableTools: {
+                "sRowSelect": "os",
+                "sSelectedClass": "selected"
+            },
+            "bJQueryUI": false,
+            "bProcessing": true,
+            "bServerSide": true,
+            "sAjaxSource": "@Url.Action("GetList","Gender")",
+            "fnServerData": function (sSource, aoData, fnCallback) {
+                $.getJSON(sSource, aoData, function (json) {
+                    fnCallback(json)
+                });
+            },
+            "iDisplayLength": 10,
+            "bAutoWidth": true,
+            "sPaginationType": "full_numbers",
+            "aaSorting": [[1, "asc"]],
+            "bStateSave": true,
+            "aoColumns": [
+                        {
+                            "sName": "Id",
+                            "sTitle": "Mã",
+                            "sClass": "center",
+                            "sDefaultContent": "",
+                            "bSearchable": false,
+                            "bSortable": false,
+                            "bVisible": false
+                        },
+                        {
+                            "sName": "Name",
+                            "sTitle": "Tên",
+                            "sClass": "left",
+                            "sDefaultContent": "",
+                            "bSearchable": true,
+                            "bSortable": true,
+                        }
+            ]
+        });
+
+        var tt = new $.fn.dataTable.TableTools(oTableGender);
+        $("#tableToolGender").prepend(tt.fnContainer());
+
+        $("#DataTableGender").dataTable().makeEditable({
+            sUpdateURL: "@Url.Action("Update","Gender")",
+            sDeleteURL: "@Url.Action("DeleteById","Gender")",
+            sDeleteRowButtonId: "btnDeleteGender",
+
+            "aoColumns": [
+                            {}
+            ]
+        });
+
+        $('#DataTableGender tbody').on('click', 'tr', function () {
+            if ($(this).hasClass('selected')) {
+                $(this).removeClass('selected');
+            }
+            else {
+                oTableGender.$('tr.selected').removeClass('selected');
+                $(this).addClass('selected');
+            }
+        });
+
+        $("#btnAddGender").click(function (e) {
+            InitialAddGenderError();
+
+            $("#formAddGender")[0].reset();
+
+            e.preventDefault();
+
+            $('#modalformAddGender').modal({
+                "backdrop": "static",
+                "keyboard": true,
+                "show": true,
+                "width": "550"
+            });
+        });
+
+        $("#btnUpdateAddGender").click(function () {
+
+            if (CheckFormAddGender()) {
+                InitialAddGenderError();
+
+                $.ajax({
+                    url: "@Url.Action("Add", "Gender")",
+                    type: "GET",
+                    data: { name: $("input[name='Gender_Name']").val()},
+                    dataType: "json",
+                    contentType: 'application/json; charset=utf-8',
+                    error: function () {
+                        ShowAddGenderError("Bạn chưa được cho phép thực hiện chức năng này. Vui lòng liên hệ quản trị hệ thống.");
+                        return false;
+                    },
+                    success: function (result) {
+                        if (result == "") {
+                            $('#modalformAddGender').modal("hide");
+                            oTableGender.draw();
+                        }
+                        else {
+                            ShowAddGenderError(result);
+                        }
+                    }
+                });
+            }
+        });
+    });
+
+    function InitialAddGenderError() {
+        $("#divAddGenderError").hide();
+        $("#lblAddGenderError").text("");
+    }
+
+    function CheckFormAddGender() {
+        var check = true;
+        var error = "";
+
+        InitialAddGenderError();
+
+        if ($("input[name='Gender_Name']").val() == "") {
+            error = "Chưa nhập tên";
+            check = false;
+        }
+
+        if (!check)
+            ShowAddGenderError(error);
+
+        return check;
+    }
+
+    function ShowAddGenderError(text) {
+        $("#divAddGenderError").show();
+        $("#lblAddGenderError").text(text);
+    }
+</script>
+
+<section class="content-header">
+    <h1>
+        Genders
+        <small>manage the genders list</small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="@Url.Action("Index","Home")"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li><a href="#">Setting</a></li>
+        <li class="active">Genders</li>
+    </ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+
+                <div class="box-header">
+                    <h3 class="box-title">Genders list</h3>
+
+                    <div class="box-tools pull-right">
+                        <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                        <div class="btn-group">
+                            <button class="btn btn-box-tool dropdown-toggle" data-toggle="dropdown"><i class="fa fa-wrench"></i></button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                    </div>
+                </div><!-- /.box-header -->
+
+                <div class="box-body">
+                    <div class="AddDeleteButton">
+                        <button class="btn btn-danger" id="btnDeleteGender">Delete</button>
+                        <button class="btn btn-primary" id="btnAddGender">Add</button>
+                    </div>
+
+                    <div class="tableTool" id="tableToolGender"></div>
+
+                    <table class="dataTable" id="DataTableGender">
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Name</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!--/span-->
+
+    </div><!--/row-->
+</section>
+
+<div class="modal fade" id="modalformAddGender" title="Thêm mới" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h3 class="animated rubberBand">@Html.Raw("Add new")</h3>
+            </div>
+            <div class="modal-body">
+                <div class="alert alert-danger" id="divAddGenderError">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <label id="lblAddGenderError"></label>
+                </div>
+
+                <form id="formAddGender" role="form">
+                    <fieldset>
+
+                        <div class="form-group">
+                            <label class="control-label" for="Gender_Name">@Html.Raw("Name: ")</label>
+                            <input type="text" class="form-control" id="Gender_Name" name="Gender_Name" placeholder="enter the name">
+                        </div>
+
+                    </fieldset>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="btn btn-default" data-dismiss="modal">Cancel</a>
+                <a href="#" class="btn btn-primary" id="btnUpdateAddGender">OK</a>
+            </div>
+        </div>
+    </div>
+</div>

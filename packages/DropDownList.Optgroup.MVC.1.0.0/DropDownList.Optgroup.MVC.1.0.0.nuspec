@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>DropDownList.Optgroup.MVC</id>
+    <version>1.0.0</version>
+    <title>DropDownList Optgroup MVC</title>
+    <authors>Bhaumik Patel</authors>
+    <owners>Bhaumik Patel</owners>
+    <projectUrl>http://bhaumikpatel.github.io/DDL.optgroup.MVC.Demo/</projectUrl>
+    <iconUrl>http://lh4.googleusercontent.com/-jikwX94gHkw/UuZ9jt91qoI/AAAAAAAACjY/UQPIxiziwK4/w160-h152-no/MVC_Optgroup.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>HTML5 &lt;optgroup&gt; tag in MVC
+
+There is no built-in support in the framework for this kind of drop down lists. 
+The &lt;optgroup&gt; is used to group related options in a drop-down list.
+Documentation/DEMO http://bhaumikpatel.github.io/DDL.optgroup.MVC.Demo/</description>
+    <summary>The &lt;optgroup&gt; is used to group related options in a drop-down list.</summary>
+    <tags>MVC optgroup DropDownList HtmlHelper</tags>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System.Web.Routing" targetFramework=".NETFramework4.0.30506.0" />
+      <frameworkAssembly assemblyName="System.Web" targetFramework=".NETFramework4.0.30506.0" />
+    </frameworkAssemblies>
+  </metadata>
+</package>
